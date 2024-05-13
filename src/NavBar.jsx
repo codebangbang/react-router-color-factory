@@ -7,7 +7,7 @@ function NavBar() {
         <nav>
             <h1>(NavBar)Welcome to the color factory.</h1>
         <Link to="/">Home</Link>
-        <Link to="/colors">Colors</Link>
+        {/* <Link to="/colors">Colors</Link> */}
         </nav>
     );
     }
