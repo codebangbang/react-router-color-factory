@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import "./Colors.css";
 
 
 function Colors({ colors }) {
     return (
-        <div className="colors" >
-            <h1>(Colors)Pick a color.</h1>
-
+        <div>
+            <h1>Pick a color, or add a new favorite</h1>
+            <div className="colors" >
             <Link to="/colors/new">Add a color</Link>
             <ul>
                 {colors.map((color) => (
@@ -16,6 +17,7 @@ function Colors({ colors }) {
                     </li>
                 ))}
             </ul>
+        </div>
         </div>
     );}
     

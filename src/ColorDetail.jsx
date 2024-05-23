@@ -13,7 +13,7 @@ function ColorDetail({ colors }) {
   return (
     <div className="color" style={{ backgroundColor: foundColor.value }}>
       <h1>{foundColor.name}</h1>
-      <p>This is one of my favorite colors!</p>
+      <p>{foundColor.name} is one of my favorite colors!</p>
       <p>
         <Link to="/colors">Go back to the color list</Link>
       </p>

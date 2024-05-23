@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 function AddColorForm({ addColor }) {
     const [name, setName] = useState("");
     const [value, setValue] = useState("#000000");
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         addColor({ name, value });
-        history.push("/colors");
+        navigate("/colors");
     };
 
     return (

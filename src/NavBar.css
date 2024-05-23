@@ -8,15 +8,16 @@ link {
 }
 
 nav {
-  /* display: flex; */
-  justify-content: space-between;
+  display: float;
+padding: 10px 0px;
+  width: 100vw;
   align-items: center;
-  padding: 0.5rem 1rem 2rem 3rem;
-  margin-top: 0.5rem;
   background-color: #a6cae2;
+  align-self: center;
 }
 
-/* Link {
-  color: white;
-  text-decoration: none;
-} */
+h1 {
+  margin: 0;
+  padding: 15px 0px;
+  font-size: 1.5em;
+}

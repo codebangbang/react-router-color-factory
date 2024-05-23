@@ -7,7 +7,7 @@ function NavBar() {
         <nav>
             <div>
                 <h1>
-                    (NavBar)Welcome to the color factory.
+                    Welcome to the color factory.
                 </h1>
             </div>
             <div>

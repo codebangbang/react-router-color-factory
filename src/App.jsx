@@ -8,9 +8,9 @@ import './App.css'
 
 function App() {
   const [colors, setColors] = useState([
-    { name: 'red', value: "#FF0000"},
-    { name: 'green', value: "#00FF00"},
-    { name: 'blue', value: "#0000FF"},
+    { name: 'Red', value: "#FF0000"},
+    { name: 'Green', value: "#00FF00"},
+    { name: 'Blue', value: "#0000FF"},
   ]);
 
   function addColor(newColor) {
@@ -24,8 +24,8 @@ function App() {
         <Route path="/colors" element={<Colors colors={colors} />} />
         <Route path="/colors/new" element={<AddColorForm addColor={addColor} />} />
         <Route path="/colors/:color" element={<ColorDetail colors={colors} />} />
-        <Route path="/" element={<Navigate to="/colors" />} />
-        <Route path="*" element={<p>Hmmm. I can't seem to find what you want.</p>} />
+        <Route path="/" element={<Navigate to="/" />} />
+        <Route path="/*" element={<p>Hmmm. I can't seem to find what you want.</p>} />
       </Routes>
     </BrowserRouter>
   )
