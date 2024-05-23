@@ -5,12 +5,18 @@ import "./NavBar.css";
 function NavBar() {
     return (
         <nav>
-            <h1>(NavBar)Welcome to the color factory.</h1>
-        <Link to="/">Home</Link>
-        {/* <Link to="/colors">Colors</Link> */}
+            <div>
+                <h1>
+                    (NavBar)Welcome to the color factory.
+                </h1>
+            </div>
+            <div>
+                <button><Link to="/">Home</Link></button>
+                <button><Link to="/colors">Colors</Link></button>
+            </div>
         </nav>
     );
-    }
+}
 
 
 export default NavBar;

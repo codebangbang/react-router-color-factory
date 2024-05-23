@@ -1,18 +1,32 @@
-import { useState } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import React, { useState } from 'react'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
+import ColorDetail from './ColorDetail'
+import AddColorForm from './AddColorForm'
 import NavBar from './NavBar'
-import ColorList from './ColorList'
+import Colors from './Colors'
 import './App.css'
 
-
-
 function App() {
-  const [color, setColor] = useState(0)
+  const [colors, setColors] = useState([
+    { name: 'red', value: "#FF0000"},
+    { name: 'green', value: "#00FF00"},
+    { name: 'blue', value: "#0000FF"},
+  ]);
 
- return (
+  function addColor(newColor) {
+    setColors([...colors, newColor]);
+  }
+
+  return (
     <BrowserRouter>
       <NavBar />
-      <ColorList color={color} setColor={setColor} />
+      <Routes>
+        <Route path="/colors" element={<Colors colors={colors} />} />
+        <Route path="/colors/new" element={<AddColorForm addColor={addColor} />} />
+        <Route path="/colors/:color" element={<ColorDetail colors={colors} />} />
+        <Route path="/" element={<Navigate to="/colors" />} />
+        <Route path="*" element={<p>Hmmm. I can't seem to find what you want.</p>} />
+      </Routes>
     </BrowserRouter>
   )
 }

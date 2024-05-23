@@ -1,8 +1,22 @@
 link {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 
-    &:hover {
-        color: #646cff;
-    }
+  &:hover {
+    color: #646cff;
+  }
 }
+
+nav {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem 2rem 3rem;
+  margin-top: 0.5rem;
+  background-color: #a6cae2;
+}
+
+/* Link {
+  color: white;
+  text-decoration: none;
+} */
