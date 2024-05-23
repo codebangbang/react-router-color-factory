@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./AddColorForm.css";
 
+// AddColorForm is a functional component that renders a form for adding a new color to the list of colors. It takes a prop addColor, which is a function that adds a new color to the list of colors. The component uses the useState hook to manage the state of the form inputs (name and value). When the form is submitted, the handleSubmit function is called, which prevents the default form submission behavior, calls the addColor function with the new color data, and navigates the user to the /colors route.
 function AddColorForm({ addColor }) {
     const [name, setName] = useState("");
     const [value, setValue] = useState("#000000");

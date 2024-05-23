@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./NavBar.css";
 import "./Colors.css";
 
-
+// Colors is a functional component that renders a list of colors. It takes a prop colors, which is an array of color objects. The component maps over the colors array and renders a list of color names as links. When a color name is clicked, the user is navigated to the /colors/:color route, where the ColorDetail component is rendered.
 function Colors({ colors }) {
     return (
         <div>
